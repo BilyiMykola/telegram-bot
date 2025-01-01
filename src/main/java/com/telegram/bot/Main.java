@@ -12,6 +12,7 @@ public class Main {
     private static FluentLogger LOG = FluentLogger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
+        MetricsConfig.configureMetrics();
         try {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             botsApi.registerBot(new TelegramBot());
